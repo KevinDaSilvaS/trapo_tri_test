@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Login</title>
+</head>
+<body class="norwegian-gradient">
+    <header class="z-depth-2">
+        <nav class="norwegian-red">
+        </nav>
+    </header>
+
+    <div id="main" class="row content">
+        <div id="register" class=" col s12 m6 l6">
+            <div class="card white">
+                <div id="slide-register hide"></div>
+                
+                <div id="form-register" class="card-content ">
+                    <div class="card-title">Register</div>
+
+                    <form class="row" id="reg" action="register.php" method="POST">
+                        
+                        <div>
+                            <input type="text" name="name" id="name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div>
+                            <input type="password" name="password" id="password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <div>
+                            <button class="btn">Registrar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col s12 m6 l6">
+            <div id="login" class="card white">
+                <div id="slide-login hide"></div>
+                <div class="card-content equal">
+                    <div class="card-title">Login</div>
+
+                    <form id="client" class="row" action="login.php" method="POST">
+                        
+                        <div>
+                            <input type="email" name="email" id="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div>
+                            <input type="password" name="password" id="password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <div>
+                            <button class="btn">Log in</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.tooltipped');
+                var instances = M.Tooltip.init(elems);
+          });
+    </script>
+</body>
+</html>
