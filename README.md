@@ -16,5 +16,5 @@ Test done for the position of php developer at trapo tri : Create a To-Do projec
 <p>Pelo fato de ter experiencia utilizando materialize css seria mais rapido</p>
 
 <h5>Organização de arquivos?</h5>
-<p>Devido ao tempo e no intuito de causar o minimo de efeitos colaterais no servidor optei por utilizar tudo no mesmo folder ou/e utilizar cdn</p>
+<p>Devido ao tempo e no intuito de causar o minimo de efeitos colaterais no servidor optei por utilizar tudo no mesmo folder ou/e utilizar cdn.Normalmente separo arquivos em update e inserts porém tambem devido ao tempo reutilizei alguns scripts</p>
 
