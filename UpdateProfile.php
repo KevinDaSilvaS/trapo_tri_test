@@ -2,7 +2,7 @@
 session_start();
 isset($_SESSION['iduser']) ? 
 $idUser = $_SESSION['iduser'] 
-: header('Location: ../logout.php');
+: header('Location: logout.php');
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +39,9 @@ $idUser = $_SESSION['iduser']
     <div id="main" class="row content">
         <div class=" col s12 m3 l3">
             <ul>
-                <li><a href="EditarPerfil.php">Editar Perfil</a></li>
-                <li><a href="Lista.php">To-Do Add</a></li>
-                <li><a href="ListaListas.php">To-Do Listas</a></li>
+                <li><a href="UpdateProfile.php">Update Profile</a></li>
+                <li><a href="List.php">To-Do</a></li>
+                <li><a href="ListOfLists.php">To-Do Lists</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
@@ -67,7 +67,7 @@ $idUser = $_SESSION['iduser']
                             <label for="password">Password</label>
                         </div>
                         <div>
-                            <button value="<?php echo $idUser;?>" name="id" class="btn">Salvar</button>
+                            <button value="<?php echo $idUser;?>" name="id" class="btn">Save</button>
                         </div>
 
                     </form>

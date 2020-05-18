@@ -12,38 +12,44 @@ $password = md5(mysqli_real_escape_string($mysqli_connection, $_POST['password']
 
 $created = date('Y-m-d H:i:s');
 
+$fields = "name, email, password, created";
+$values = "'$name','$email','$password','$created'";
+
+if (isset($_POST['id'])) {
+
+    $id = mysqli_real_escape_string($mysqli_connection, $_POST['id']);
+    $fields = "name = '$name', email = '$email', password = '$password', updated = '$created'";
+
+    $searchEmail = $handler->selectWhere("id","user","email = '$email' AND id != '$id'");
+    if (is_array($searchEmail)) {
+        header('Location: logout.php');
+        exit;
+    }
+
+    $response = $handler->update("user",$fields,"id = '$id'");
+    if ($response == 1) {
+        $_SESSION['sucess'] = true;
+        header('Location: List.php');
+        exit;
+    }
+    echo $response;
+    exit;
+}
+
 $searchEmail = $handler->selectWhere("id","user","email = '$email'");
 if (is_array($searchEmail)) {
     header('Location: logout.php');
     exit;
 }
 
-$fields = "name, email, password, created";
-$values = "'$name','$email','$password','$created'";
+$response = $handler->insertFields("user",$fields,$values);
 
-if (isset($_POST['id'])) {
-    $id = mysqli_real_escape_string($mysqli_connection, $_POST['id']);
-    $fields = "name = '$name', email = '$email', password = '$password', updated = '$created'";
-
-    $resposta = $handler->update("user",$fields,"id = '$id'");
-
-    if ($resposta == 1) {
-        $_SESSION['sucess'] = true;
-        header('Location: Lista.php');
-        exit;
-    }
-    echo $resposta;
-    exit;
-}
-
-$resposta = $handler->insertFields("user",$fields,$values);
-
-if ($resposta == 1) {
+if ($response == 1) {
     $_SESSION['sucess'] = true;
     header('Location: sign.html');
     exit;
 }
-echo $resposta;
+echo $response;
 exit;
 
 ?>
