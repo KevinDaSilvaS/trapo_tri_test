@@ -18,3 +18,6 @@ Test done for the position of php developer at trapo tri : Create a To-Do projec
 <h5>Organização de arquivos?</h5>
 <p>Devido ao tempo e no intuito de causar o minimo de efeitos colaterais no servidor optei por utilizar tudo no mesmo folder ou/e utilizar cdn.Normalmente separo arquivos em update e inserts porém tambem devido ao tempo reutilizei alguns scripts</p>
 
+<h5>Nomenclatura</h5>
+<p>Arquivos onde de alguma forma o usuario irá interagir diretamente ou classes são nomeados em Pascal Case(cada nome inicia com letra maiuscula),arquivos sem interação direta são camel case(primeira letra minuscula e letras iniciais de outras palavras maiusculas)</p>
+
