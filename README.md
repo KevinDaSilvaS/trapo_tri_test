@@ -8,3 +8,13 @@ Test done for the position of php developer at trapo tri : Create a To-Do projec
 
 <h5>Por que a não utilização de ORM?</h5>
 <p>Pelo fato do banco só ter apenas 3 tabelas não considerei necessario utilizar um quando uma classe de gerencimento utilizando OOP resolveria</p>
+
+<h5>Por que a utilização de Mysqli e não PDO?</h5>
+<p>PDO é a recomendação porém devido ao fato de estar especificado que o banco seria mysql e pelo fato da minha classe de controle de banco de dados ser de mysqli optei por usar o mesmo</p>
+
+<h5>Por que a não utilização de Bootstrap ou template?</h5>
+<p>Pelo fato de ter experiencia utilizando materialize css seria mais rapido</p>
+
+<h5>Organização de arquivos?</h5>
+<p>Devido ao tempo e no intuito de causar o minimo de efeitos colaterais no servidor optei por utilizar tudo no mesmo folder ou/e utilizar cdn</p>
+
